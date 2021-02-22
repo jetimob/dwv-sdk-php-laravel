@@ -10,8 +10,13 @@ class BuildingDescription
 
     protected string $title;
 
-    /** @var \Jetimob\DWV\ObjectMapping\Property\BuildingDescriptionItem[] $items */
+    /** @var BuildingDescriptionItem[] $items */
     protected array $items;
+
+    protected function itemsItemType(): string
+    {
+        return BuildingDescriptionItem::class;
+    }
 
     /**
      * @return string

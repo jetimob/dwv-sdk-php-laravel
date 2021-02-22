@@ -14,12 +14,22 @@ class Building
     protected ?string $video;
     protected ?string $tour_360;
     protected ?string $text_address;
-    /** @var \Jetimob\DWV\ObjectMapping\Property\BuildingDescription[] $description */
+    /** @var BuildingDescription[] $description */
     protected ?array $description;
     protected ?BuildingAddress $address;
-    /** @var \Jetimob\DWV\ObjectMapping\Property\BuildingFeature[] $features */
+    /** @var BuildingFeature[] $features */
     protected ?array $features;
     protected ?BuildingCover $cover;
+
+    protected function descriptionItemType(): string
+    {
+        return BuildingDescription::class;
+    }
+
+    protected function featuresItemType(): string
+    {
+        return BuildingFeature::class;
+    }
 
     /**
      * @return string
