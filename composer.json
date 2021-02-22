@@ -1,0 +1,48 @@
+{
+    "name": "jetimob/dwv-sdk-php-laravel",
+    "description": "",
+    "keywords": ["laravel", "dwv"],
+    "type": "library",
+    "require-dev": {
+        "orchestra/testbench": "^6.12",
+        "phpunit/phpunit": "^9.5.2"
+    },
+    "require": {
+        "php": "^7.4|8.*",
+        "jetimob/http-php-laravel": "dev-main"
+    },
+    "repositories": {
+        "jetimob/http-php-laravel": {
+            "type": "vcs",
+            "url": "git@github.com:jetimob/http-php-laravel"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Weingartner",
+            "email": "hi@alanwgt.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jetimob\\DWV\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jetimob\\DWV\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jetimob\\DWV\\DWVServiceProvider"
+            ],
+            "aliases": {
+                "RDStation": "Jetimob\\DWV\\Facade\\DWV"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
