@@ -3,6 +3,7 @@
 namespace Jetimob\DWV\Api\Property;
 
 use Jetimob\DWV\ObjectMapping\Property\PropertyData;
+use Jetimob\DWV\Api\Traits\PaginatedResponse;
 use Jetimob\Http\Response;
 
 class PropertyListResponse extends Response

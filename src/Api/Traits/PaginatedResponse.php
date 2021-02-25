@@ -1,6 +1,6 @@
 <?php
 
-namespace Jetimob\DWV\Api\Property;
+namespace Jetimob\DWV\Api\Traits;
 
 trait PaginatedResponse
 {
