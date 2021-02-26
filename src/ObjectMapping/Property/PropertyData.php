@@ -8,13 +8,30 @@ class PropertyData
 {
     use Serializable;
 
+    /** @var int $id - ID de integração do imóvel */
     protected int $id;
+
+    /** @var string $advertisement_title - Titulo de anúncio do imóvel */
     protected string $advertisement_title;
+
+    /** @var string $description - Descrição do imóvel integrado */
     protected string $description;
+
+    /** @var string $status
+     * enum: "active" "inactive" "auto_inactive"
+     * Informa o estado de integração do imóvel (A imobiliaria pode ativar ou desativar a integração do imóvel,
+     * mas quando o status for auto_inactive significa que o imóvel no momento não se encontra disponivel para
+     * venda no sistema e por isso deve-se ignorar integração deste imóvel)
+     */
     protected string $status;
+
+    /** @var string|null $address_display_type - Tipo de exibição que a imobiliaria escolheu para exibir os endereços das propriedades */
     protected ?string $address_display_type;
 
+    /** @var Unit $unit - Informações da unidade selecionada para integração */
     protected Unit $unit;
+
+    /** @var Building $building - Informações do empreendimento */
     protected Building $building;
 
     /**
