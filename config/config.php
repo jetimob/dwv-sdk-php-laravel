@@ -15,7 +15,7 @@ return [
 
         // guzzle configuration, given to Guzzle instance as is
         'guzzle' => [
-            'base_uri' => 'https://sandbox.dwvapp.com.br',
+            'base_uri' => 'https://dwvapp.com.br/',
 
             // Number of seconds to wait while trying to connect to a server. 0 waits indefinitely.
             'connect_timeout' => 0.0,
@@ -24,7 +24,7 @@ return [
             'timeout' => 0.0,
 
             // Set this to true if you want to debug the request/response.
-            'debug' => true,
+            'debug' => false,
 
             'middlewares' => [
                 \Jetimob\Http\Middlewares\AuthorizationBearerRequestMiddleware::class,
