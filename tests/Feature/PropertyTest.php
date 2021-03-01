@@ -10,7 +10,7 @@ use Jetimob\DWV\ObjectMapping\Property\Condition;
 use Jetimob\DWV\ObjectMapping\Property\PropertyData;
 use Jetimob\DWV\Tests\TestCase;
 
-class PropertyTestCase extends TestCase
+class PropertyTest extends TestCase
 {
     /** @test */
     public function canListPropertiesWithoutParams(): void

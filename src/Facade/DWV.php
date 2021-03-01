@@ -13,6 +13,6 @@ class DWV extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'dwv';
+        return 'jetimob.dwv';
     }
 }

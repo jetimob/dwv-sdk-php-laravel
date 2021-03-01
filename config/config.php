@@ -11,11 +11,11 @@ return [
         // before retrying a failed request, wait for the specified amount of time, in milliseconds
         'retry_delay' => 2000,
 
-        'authorization_header_bearer_token' => env('DWV_BEARER_TOKEN', ''),
+        'authorization_header_bearer_token' => null,
 
         // guzzle configuration, given to Guzzle instance as is
         'guzzle' => [
-            'base_uri' => 'https://dwvapp.com.br/',
+            'base_uri' => env( 'DWV_BASE_URI', 'https://dwvapp.com.br/'),
 
             // Number of seconds to wait while trying to connect to a server. 0 waits indefinitely.
             'connect_timeout' => 0.0,

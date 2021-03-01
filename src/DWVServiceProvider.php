@@ -39,7 +39,7 @@ class DWVServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->app->singleton('dwv', function () {
+        $this->app->bind('jetimob.dwv', function () {
             return new DWV(config('dwv'));
         });
     }
