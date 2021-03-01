@@ -40,7 +40,7 @@
                 "Jetimob\\DWV\\DWVServiceProvider"
             ],
             "aliases": {
-                "RDStation": "Jetimob\\DWV\\Facade\\DWV"
+                "DWV": "Jetimob\\DWV\\Facade\\DWV"
             }
         }
     },
