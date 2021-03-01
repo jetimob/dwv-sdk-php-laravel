@@ -20,8 +20,8 @@ class PropertyRequestWrapper extends RequestWrapper
             $params = $params->toArray();
         }
 
-        return $this->http->sendExpectingResponseClass(
-            new Request('get', 'integration/properties'),
+        return $this->dwv->getClient()->sendExpectingResponseClass(
+            $this->createAuthorizedRequest('get', 'integration/properties'),
             PropertyListResponse::class,
             ['query' => $params],
         );
@@ -29,8 +29,8 @@ class PropertyRequestWrapper extends RequestWrapper
 
     public function conditions(): Response
     {
-        return $this->http->sendExpectingResponseClass(
-            new Request('get', 'integration/properties/conditions'),
+        return $this->dwv->getClient()->sendExpectingResponseClass(
+            $this->createAuthorizedRequest('get', 'integration/properties/conditions'),
             PropertyConditionListResponse::class,
         );
     }

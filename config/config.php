@@ -11,7 +11,7 @@ return [
         // before retrying a failed request, wait for the specified amount of time, in milliseconds
         'retry_delay' => 2000,
 
-        'authorization_header_bearer_token' => null,
+        'dwv_bearer_token' => null,
 
         // guzzle configuration, given to Guzzle instance as is
         'guzzle' => [
@@ -27,7 +27,6 @@ return [
             'debug' => false,
 
             'middlewares' => [
-                \Jetimob\Http\Middlewares\AuthorizationBearerRequestMiddleware::class,
             ],
         ],
     ],

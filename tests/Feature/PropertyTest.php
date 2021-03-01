@@ -16,7 +16,7 @@ class PropertyTest extends TestCase
     public function canListPropertiesWithoutParams(): void
     {
         /** @var PropertyListResponse $response */
-        $response = DWV::properties()->list();
+        $response = DWV::properties(env('DWV_BEARER_TOKEN'))->list();
         self::assertNotEmpty($response->getData());
         self::assertInstanceOf(PropertyListResponse::class, $response);
         self::assertInstanceOf(PropertyData::class, $response->getData()[0]);
@@ -29,7 +29,7 @@ class PropertyTest extends TestCase
         $params->setLimit(1);
 
         /** @var PropertyListResponse $response */
-        $response = DWV::properties()->list($params);
+        $response = DWV::properties(env('DWV_BEARER_TOKEN'))->list($params);
         self::assertNotEmpty($response);
         self::assertInstanceOf(PropertyListResponse::class, $response);
         self::assertInstanceOf(PropertyData::class, $response->getData()[0]);
@@ -38,7 +38,7 @@ class PropertyTest extends TestCase
     /** @test */
     public function canListPropertiesConditions(): void
     {
-        $response = DWV::properties()->conditions();
+        $response = DWV::properties(env('DWV_BEARER_TOKEN'))->conditions();
 
         self::assertNotEmpty($response->getData());
         self::assertInstanceOf(PropertyConditionListResponse::class, $response);
