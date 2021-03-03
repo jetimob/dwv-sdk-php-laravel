@@ -8,7 +8,17 @@ class BuildingCover
 {
     use Serializable;
 
+    protected string $url;
+
     protected BuildingCoverSizes $sizes;
+
+    /**
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
 
     /**
      * @return BuildingCoverSizes
