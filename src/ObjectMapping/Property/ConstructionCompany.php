@@ -8,7 +8,7 @@ class ConstructionCompany
 {
     use Serializable;
 
-    protected string $title;
+    protected ?string $title;
     protected ?string $site;
     protected ?string $whatsapp;
     protected ?string $instagram;
@@ -18,12 +18,22 @@ class ConstructionCompany
     protected ?array $additionals_contacts;
     protected ConstructionCompanyLogo $logo;
 
-    /**
-     * @return string
-     */
-    public function getTitle(): string
+    protected function business_contactsItemType(): string
     {
-        return $this->title;
+        return ConstructionCompanyBusinessContact::class;
+    }
+
+    protected function additionals_contactsItemType(): string
+    {
+        return ConstructionCompanyAdditionalContact::class;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTitle(): ?string
+    {
+        return $this->title ?? null;
     }
 
     /**
@@ -31,7 +41,7 @@ class ConstructionCompany
      */
     public function getSite(): ?string
     {
-        return $this->site;
+        return $this->site ?? null;
     }
 
     /**
@@ -39,7 +49,7 @@ class ConstructionCompany
      */
     public function getWhatsapp(): ?string
     {
-        return $this->whatsapp;
+        return $this->whatsapp ?? null;
     }
 
     /**
@@ -47,7 +57,7 @@ class ConstructionCompany
      */
     public function getInstagram(): ?string
     {
-        return $this->instagram;
+        return $this->instagram ?? null;
     }
 
     /**
@@ -55,7 +65,7 @@ class ConstructionCompany
      */
     public function getBusinessContacts(): ?array
     {
-        return $this->business_contacts;
+        return $this->business_contacts ?? [];
     }
 
     /**
@@ -63,7 +73,7 @@ class ConstructionCompany
      */
     public function getAdditionalsContacts(): ?array
     {
-        return $this->additionals_contacts;
+        return $this->additionals_contacts ?? [];
     }
 
     /**

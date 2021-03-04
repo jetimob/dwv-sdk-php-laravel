@@ -8,23 +8,23 @@ class ConstructionCompanyBusinessContact
 {
     use Serializable;
 
-    protected string $responsible;
-    protected string $phone_number;
+    protected ?string $responsible;
+    protected ?string $phone_number;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getResponsible(): string
+    public function getResponsible(): ?string
     {
-        return $this->responsible;
+        return $this->responsible ?? null;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPhoneNumber(): string
+    public function getPhoneNumber(): ?string
     {
-        return $this->phone_number;
+        return $this->phone_number ?? null;
     }
 
 

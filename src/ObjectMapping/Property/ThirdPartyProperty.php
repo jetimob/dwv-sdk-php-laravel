@@ -18,6 +18,11 @@ class ThirdPartyProperty
     /** @var BuildingFeature[] $features */
     protected ?array $features;
 
+    protected function featuresItemType(): string
+    {
+        return BuildingFeature::class;
+    }
+
     /**
      * @return string
      */
@@ -79,6 +84,6 @@ class ThirdPartyProperty
      */
     public function getFeatures(): ?array
     {
-        return $this->features;
+        return $this->features ?? [];
     }
 }

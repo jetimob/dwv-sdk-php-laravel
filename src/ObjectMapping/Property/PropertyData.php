@@ -77,7 +77,7 @@ class PropertyData
      */
     public function getAddressDisplayType(): ?string
     {
-        return $this->address_display_type;
+        return $this->address_display_type ?? null;
     }
 
     /**

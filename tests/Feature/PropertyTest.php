@@ -45,8 +45,4 @@ class PropertyTest extends TestCase
         self::assertInstanceOf(Condition::class, $response->getData()[0]);
     }
 
-    public function canListPropertiesTypes(): void
-    {
-        $response = DWV::properties()->types();
-    }
 }

@@ -8,23 +8,23 @@ class ConstructionCompanyAdditionalContact
 {
     use Serializable;
 
-    protected string $responsible;
-    protected string $whatsapp;
+    protected ?string $responsible;
+    protected ?string $whatsapp;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getResponsible(): string
+    public function getResponsible(): ?string
     {
-        return $this->responsible;
+        return $this->responsible ?? null;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getWhatsapp(): string
+    public function getWhatsapp(): ?string
     {
-        return $this->whatsapp;
+        return $this->whatsapp ?? null;
     }
 
 

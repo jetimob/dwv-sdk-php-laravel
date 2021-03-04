@@ -46,7 +46,7 @@ class BuildingAddress
      */
     public function getComplement(): ?string
     {
-        return $this->complement;
+        return $this->complement ?? null;
     }
 
     /**
@@ -74,10 +74,10 @@ class BuildingAddress
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
-        return $this->country;
+        return $this->country ?? null;
     }
 }
