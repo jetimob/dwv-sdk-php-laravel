@@ -49,11 +49,11 @@ class PropertyData
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getAdvertisementTitle(): string
+    public function getAdvertisementTitle(): ?string
     {
-        return $this->advertisement_title;
+        return $this->advertisement_title ?? null;
     }
 
     /**
@@ -81,26 +81,26 @@ class PropertyData
     }
 
     /**
-     * @return Unit
+     * @return Unit|null
      */
-    public function getUnit(): Unit
+    public function getUnit(): ?Unit
     {
-        return $this->unit;
+        return $this->unit ?? null;
     }
 
     /**
-     * @return Building
+     * @return Building|null
      */
-    public function getBuilding(): Building
+    public function getBuilding(): ?Building
     {
-        return $this->building;
+        return $this->building ?? null;
     }
 
     /**
-     * @return ThirdPartyProperty
+     * @return ThirdPartyProperty|null
      */
-    public function getThirdPartyProperty(): ThirdPartyProperty
+    public function getThirdPartyProperty(): ?ThirdPartyProperty
     {
-        return $this->third_party_property;
+        return $this->third_party_property ?? null;
     }
 }
