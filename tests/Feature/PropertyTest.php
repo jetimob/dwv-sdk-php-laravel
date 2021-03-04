@@ -44,4 +44,5 @@ class PropertyTest extends TestCase
         self::assertInstanceOf(PropertyConditionListResponse::class, $response);
         self::assertInstanceOf(Condition::class, $response->getData()[0]);
     }
+
 }

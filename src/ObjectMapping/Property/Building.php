@@ -32,35 +32,35 @@ class Building
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
-        return $this->title;
+        return $this->title ?? null;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getGallery(): string
+    public function getArchitecturalPlans(): ?string
     {
-        return $this->gallery;
+        return $this->architectural_plans ?? null;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getArchitecturalPlans(): string
+    public function getGallery(): ?string
     {
-        return $this->architectural_plans;
+        return $this->gallery ?? null;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getVideo(): string
+    public function getVideo(): ?string
     {
-        return $this->video;
+        return $this->video ?? null;
     }
 
     /**
@@ -68,46 +68,46 @@ class Building
      */
     public function getTour360(): ?string
     {
-        return $this->tour_360;
+        return $this->tour_360 ?? null;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTextAddress(): string
+    public function getTextAddress(): ?string
     {
-        return $this->text_address;
+        return $this->text_address ?? null;
     }
 
     /**
      * @return BuildingDescription[]
      */
-    public function getDescription(): array
+    public function getDescription(): ?array
     {
-        return $this->description;
+        return $this->description ?? [];
     }
 
     /**
-     * @return BuildingAddress
+     * @return BuildingAddress|null
      */
-    public function getAddress(): BuildingAddress
+    public function getAddress(): ?BuildingAddress
     {
-        return $this->address;
+        return $this->address ?? null;
     }
 
     /**
      * @return BuildingFeature[]
      */
-    public function getFeatures(): array
+    public function getFeatures(): ?array
     {
-        return $this->features;
+        return $this->features ?? [];
     }
 
     /**
-     * @return BuildingCover
+     * @return BuildingCover|null
      */
-    public function getCover(): BuildingCover
+    public function getCover(): ?BuildingCover
     {
-        return $this->cover;
+        return $this->cover ?? null;
     }
 }

@@ -11,11 +11,11 @@ class BuildingAddress
     protected string $street_name;
     protected string $street_number;
     protected string $neighborhood;
-    protected string $complement;
+    protected ?string $complement;
     protected string $zip_code;
     protected string $city;
     protected string $state;
-    protected string $country;
+    protected ?string $country;
 
     /**
      * @return string
@@ -42,11 +42,11 @@ class BuildingAddress
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getComplement(): string
+    public function getComplement(): ?string
     {
-        return $this->complement;
+        return $this->complement ?? null;
     }
 
     /**
@@ -74,10 +74,10 @@ class BuildingAddress
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
-        return $this->country;
+        return $this->country ?? null;
     }
 }

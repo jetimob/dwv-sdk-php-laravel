@@ -34,6 +34,12 @@ class PropertyData
     /** @var Building $building - Informações do empreendimento */
     protected Building $building;
 
+    /** @var ThirdPartyProperty $third_party_property - Informações do terceiro selecionado para integração */
+    protected ThirdPartyProperty $third_party_property;
+
+    /** @var ConstructionCompany $construction_company - Informações da construtora */
+    protected ConstructionCompany $construction_company;
+
     /**
      * @return int
      */
@@ -71,7 +77,7 @@ class PropertyData
      */
     public function getAddressDisplayType(): ?string
     {
-        return $this->address_display_type;
+        return $this->address_display_type ?? null;
     }
 
     /**
@@ -88,5 +94,13 @@ class PropertyData
     public function getBuilding(): Building
     {
         return $this->building;
+    }
+
+    /**
+     * @return ThirdPartyProperty
+     */
+    public function getThirdPartyProperty(): ThirdPartyProperty
+    {
+        return $this->third_party_property;
     }
 }
