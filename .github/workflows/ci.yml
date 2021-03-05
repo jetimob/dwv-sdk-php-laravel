@@ -38,6 +38,8 @@ jobs:
           php_version: 7.4
           version: 2
           args: --prefer-dist
+          ssh_key: ${{ secrets.ssh_key }}
+          ssh_key_pub: ${{ secrets.ssh_key_pub }}
 
       - name: Run tests
         uses: php-actions/phpunit@v2
