@@ -14,7 +14,7 @@
         </testsuite>
     </testsuites>
     <php>
-        <env name="DWV_BEARER_TOKEN" value=""/>
+        <env name="DWV_BEARER_TOKEN" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbW9iaWxpYXJpYV9pZCI6IjEiLCJpbnRlZ3JhdGlvbl9pZCI6MSwiaWF0IjoxNjA3MzY3ODA2fQ.YFqnvt0Xg7MopUS-PpZYO53HF54ru6G22RshZiGjr_E"/>
         <env name="DWV_BASE_URI" value="https://sandbox.dwvapp.com.br/"/>
     </php>
 </phpunit>

@@ -1,0 +1,47 @@
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate composer files
+        run: composer validate --strict
+
+      - name: Determine composer cache directory
+        id: composer-cache-dir
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache composer dependencies
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        uses: php-actions/composer@v5
+        with:
+          dev: yes
+          php_version: 7.4
+          version: 2
+          args: --prefer-dist
+
+      - name: Run tests
+        uses: php-actions/phpunit@v2
+        with:
+          configuration: phpunit.prod.xml
+          php_version: 7.4
+          version: 9
