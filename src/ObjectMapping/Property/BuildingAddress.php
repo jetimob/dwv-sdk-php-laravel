@@ -8,6 +8,7 @@ class BuildingAddress
 {
     use Serializable;
 
+    protected int $id;
     protected string $street_name;
     protected string $street_number;
     protected string $neighborhood;

@@ -37,7 +37,7 @@ class PropertyRequestWrapper extends RequestWrapper
 
     public function types(): Response
     {
-        return $this->http->sendExpectingResponseClass(
+        return $this->dwv->getClient()->sendExpectingResponseClass(
             new Request('get', 'integration/properties/types'),
             PropertyConditionListResponse::class,
         );

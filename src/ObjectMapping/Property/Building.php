@@ -10,8 +10,10 @@ class Building
 
     protected int $id;
     protected ?string $title;
-    protected ?string $architectural_plans;
-    protected ?string $gallery;
+    /** @var BuildingCover[]|null */
+    protected ?array $architectural_plans;
+    /** @var BuildingCover[]|null */
+    protected ?array $gallery;
     protected ?string $video;
     protected ?string $tour_360;
     protected ?string $text_address;
@@ -30,6 +32,16 @@ class Building
     protected function featuresItemType(): string
     {
         return BuildingFeature::class;
+    }
+
+    protected function architectural_plansItemType(): string
+    {
+        return BuildingCover::class;
+    }
+
+    protected function galleryItemType(): string
+    {
+        return BuildingCover::class;
     }
 
     /**
