@@ -14,6 +14,13 @@ class Unit
     protected int $parking_spaces;
     protected int $dorms;
     protected int $suites;
+    /** @var UnitPaymentCondition[] */
+    protected ?array $payment_conditions;
+
+    protected function payment_conditionsItemType(): string
+    {
+        return UnitPaymentCondition::class;
+    }
 
     /**
      * @return int
@@ -61,5 +68,13 @@ class Unit
     public function getSuites(): int
     {
         return $this->suites;
+    }
+
+    /**
+     * @return UnitPaymentCondition[]
+     */
+    public function getPaymentConditions(): array
+    {
+        return $this->payment_conditions ?? [];
     }
 }
