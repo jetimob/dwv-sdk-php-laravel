@@ -8,6 +8,7 @@ class Building
 {
     use Serializable;
 
+    protected int $id;
     protected ?string $title;
     protected ?string $architectural_plans;
     protected ?string $gallery;
@@ -110,4 +111,13 @@ class Building
     {
         return $this->cover ?? null;
     }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
 }
