@@ -8,6 +8,7 @@ class Unit
 {
     use Serializable;
 
+    protected int $id;
     protected int $title;
     protected float $price;
     protected string $type;
@@ -20,6 +21,14 @@ class Unit
     protected function payment_conditionsItemType(): string
     {
         return UnitPaymentCondition::class;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     /**
