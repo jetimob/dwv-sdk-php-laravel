@@ -15,8 +15,15 @@ class ThirdPartyProperty
     protected string $text_address;
     protected BuildingAddress $address;
     protected BuildingCover $cover;
+    /** @var BuildingCover[]|null */
+    protected ?array $gallery;
     /** @var BuildingFeature[] $features */
     protected ?array $features;
+
+    protected function galleryItemType(): string
+    {
+        return BuildingCover::class;
+    }
 
     protected function featuresItemType(): string
     {
@@ -77,6 +84,14 @@ class ThirdPartyProperty
     public function getCover(): BuildingCover
     {
         return $this->cover;
+    }
+
+    /**
+     * @return BuildingCover[]|null
+     */
+    public function getGallery(): ?array
+    {
+        return $this->gallery;
     }
 
     /**
