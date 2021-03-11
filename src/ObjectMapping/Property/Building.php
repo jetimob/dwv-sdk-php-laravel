@@ -53,19 +53,19 @@ class Building
     }
 
     /**
-     * @return string|null
+     * @return BuildingCover[]|null
      */
-    public function getArchitecturalPlans(): ?string
+    public function getArchitecturalPlans(): ?array
     {
-        return $this->architectural_plans ?? null;
+        return $this->architectural_plans ?? [];
     }
 
     /**
-     * @return string|null
+     * @return BuildingCover[]|null
      */
-    public function getGallery(): ?string
+    public function getGallery(): ?array
     {
-        return $this->gallery ?? null;
+        return $this->gallery ?? [];
     }
 
     /**
