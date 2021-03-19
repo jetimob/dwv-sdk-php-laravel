@@ -9,7 +9,7 @@ class Unit
     use Serializable;
 
     protected int $id;
-    protected int $title;
+    protected string $title;
     protected float $price;
     protected string $type;
     protected int $parking_spaces;
@@ -32,11 +32,11 @@ class Unit
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getTitle(): int
+    public function getTitle(): string
     {
-        return $this->title;
+        return $this->title ?? '';
     }
 
     /**
@@ -64,11 +64,11 @@ class Unit
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getDorms(): int
+    public function getDorms(): ?int
     {
-        return $this->dorms;
+        return $this->dorms ?? null;
     }
 
     /**
