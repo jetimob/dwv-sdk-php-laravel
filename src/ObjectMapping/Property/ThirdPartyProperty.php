@@ -11,7 +11,7 @@ class ThirdPartyProperty
     protected string $title;
     protected float $price;
     protected string $type;
-    protected int $dorms;
+    protected ?int $dorms;
     protected string $text_address;
     protected BuildingAddress $address;
     protected BuildingCover $cover;
@@ -55,11 +55,11 @@ class ThirdPartyProperty
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getDorms(): int
+    public function getDorms(): ?int
     {
-        return $this->dorms;
+        return $this->dorms ?? null;
     }
 
     /**
