@@ -25,6 +25,9 @@ class PropertyData
      */
     protected string $status;
 
+    /** @var bool $deleted - Informa se o imóvel integrado pela imobiliária, foi deletada pela mesma da integração.*/
+    protected bool $deleted;
+
     /** @var string|null $address_display_type - Tipo de exibição que a imobiliaria escolheu para exibir os endereços das propriedades */
     protected ?string $address_display_type;
 
@@ -102,5 +105,21 @@ class PropertyData
     public function getThirdPartyProperty(): ?ThirdPartyProperty
     {
         return $this->third_party_property ?? null;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDeleted(): bool
+    {
+        return $this->deleted;
+    }
+
+    /**
+     * @return ConstructionCompany
+     */
+    public function getConstructionCompany(): ConstructionCompany
+    {
+        return $this->construction_company;
     }
 }
