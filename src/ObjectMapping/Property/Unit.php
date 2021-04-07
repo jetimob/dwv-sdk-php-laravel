@@ -15,6 +15,8 @@ class Unit
     protected int $parking_spaces;
     protected int $dorms;
     protected int $suites;
+    protected ?float $private_area;
+    protected ?float $total_area;
     /** @var UnitPaymentCondition[] */
     protected ?array $payment_conditions;
 
@@ -85,5 +87,21 @@ class Unit
     public function getPaymentConditions(): array
     {
         return $this->payment_conditions ?? [];
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getPrivateArea(): ?float
+    {
+        return $this->private_area;
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getTotalArea(): ?float
+    {
+        return $this->total_area;
     }
 }
