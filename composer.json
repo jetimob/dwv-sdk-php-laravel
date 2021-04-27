@@ -4,18 +4,12 @@
     "keywords": ["laravel", "dwv"],
     "type": "library",
     "require-dev": {
-        "orchestra/testbench": "^6.12",
-        "phpunit/phpunit": "^9.5.2"
+        "orchestra/testbench": "^6.17",
+        "phpunit/phpunit": "^9.5"
     },
     "require": {
         "php": "^7.4|8.*",
-        "jetimob/http-php-laravel": "dev-main"
-    },
-    "repositories": {
-        "jetimob/http-php-laravel": {
-            "type": "vcs",
-            "url": "git@github.com:jetimob/http-php-laravel"
-        }
+        "jetimob/http-php-laravel": "v1.0.0"
     },
     "license": "MIT",
     "authors": [
