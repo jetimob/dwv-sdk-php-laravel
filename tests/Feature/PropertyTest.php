@@ -60,6 +60,9 @@ class PropertyTest extends TestCase
             if ($building = $propertyData->getBuilding()) {
                 self::assertIsFloat($building->getAddress()->getLatitude());
                 self::assertIsFloat($building->getAddress()->getLongitude());
+                if (!is_null($building->getIncorporation())) {
+                    self::assertIsString($building->getIncorporation());
+                }
             }
         }
     }
