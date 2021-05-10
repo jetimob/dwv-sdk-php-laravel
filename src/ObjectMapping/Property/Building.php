@@ -10,6 +10,7 @@ class Building
 
     protected int $id;
     protected ?string $title;
+    protected ?string $incorporation;
     /** @var BuildingCover[]|null */
     protected ?array $architectural_plans;
     /** @var BuildingCover[]|null */
@@ -132,4 +133,11 @@ class Building
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
+    public function getIncorporation(): ?string
+    {
+        return $this->incorporation ?? null;
+    }
 }
