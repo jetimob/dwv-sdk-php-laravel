@@ -9,7 +9,7 @@
     },
     "require": {
         "php": "^7.4|8.*",
-        "jetimob/http-php-laravel": "v1.0.0"
+        "jetimob/http-php-laravel": "^v1.1.0"
     },
     "license": "MIT",
     "authors": [
