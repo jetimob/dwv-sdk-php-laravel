@@ -11,7 +11,9 @@ class PropertyData
     /** @var int $id - ID de integração do imóvel */
     protected int $id;
 
-    /** @var string $advertisement_title - Titulo de anúncio do imóvel */
+    protected string $title;
+
+    /** @var string $advertisement_title - Titulo de anúncio do imóvel (depreciado) */
     protected string $advertisement_title;
 
     /** @var string $description - Descrição do imóvel integrado */
@@ -122,4 +124,13 @@ class PropertyData
     {
         return $this->construction_company;
     }
+
+    /**
+     * @return string|null
+     */
+    public function getTitle(): ?string
+    {
+        return $this->title ?? null;
+    }
+
 }

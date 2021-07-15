@@ -15,8 +15,10 @@ class ThirdPartyProperty
     protected ?int $dorms;
     protected string $text_address;
     protected ?float $private_area;
+    protected ?float $util_area;
     protected ?float $total_area;
     protected ?int $suites;
+    protected ?int $bathroom;
     protected ?int $parking_spaces;
     protected BuildingAddress $address;
     protected BuildingCover $cover;
@@ -161,4 +163,21 @@ class ThirdPartyProperty
     {
         return $this->payment_conditions ?? null;
     }
+
+    /**
+     * @return float|null
+     */
+    public function getUtilArea(): ?float
+    {
+        return $this->util_area ?? null;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getBathroom(): ?int
+    {
+        return $this->bathroom ?? null;
+    }
+
 }
