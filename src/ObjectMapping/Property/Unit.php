@@ -15,6 +15,8 @@ class Unit
     protected int $parking_spaces;
     protected int $dorms;
     protected int $suites;
+    protected ?int $bathroom;
+    protected ?float $util_area;
     protected ?float $private_area;
     protected ?float $total_area;
     /** @var UnitPaymentCondition[] */
@@ -103,5 +105,21 @@ class Unit
     public function getTotalArea(): ?float
     {
         return $this->total_area;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getBathroom(): ?int
+    {
+        return $this->bathroom;
+    }
+
+    /**
+     * @return float|null
+     */
+    public function getUtilArea(): ?float
+    {
+        return $this->util_area;
     }
 }
