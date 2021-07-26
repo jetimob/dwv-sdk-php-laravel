@@ -56,6 +56,9 @@ class PropertyTest extends TestCase
                 if (!is_null($unit->getTotalArea())) {
                     self::assertIsFloat($unit->getTotalArea());
                 }
+                $floorPlan = $unit->getFloorPlan();
+                self::assertIsString($floorPlan->getCategory()->getTag());
+                self::assertIsString($floorPlan->getCategory()->getTitle());
             }
             if ($building = $propertyData->getBuilding()) {
                 self::assertIsFloat($building->getAddress()->getLatitude());
