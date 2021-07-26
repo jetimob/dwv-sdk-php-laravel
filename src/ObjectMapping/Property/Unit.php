@@ -11,6 +11,7 @@ class Unit
     protected int $id;
     protected string $title;
     protected float $price;
+    protected FloorPlan $floor_plan;
     protected string $type;
     protected int $parking_spaces;
     protected int $dorms;
@@ -122,4 +123,13 @@ class Unit
     {
         return $this->util_area;
     }
+
+    /**
+     * @return FloorPlan
+     */
+    public function getFloorPlan(): FloorPlan
+    {
+        return $this->floor_plan;
+    }
+
 }
