@@ -12,7 +12,7 @@ class Unit
     protected string $title;
     protected float $price;
     protected FloorPlan $floor_plan;
-    protected string $type;
+    protected ?string $type;
     protected int $parking_spaces;
     protected int $dorms;
     protected int $suites;
@@ -53,11 +53,11 @@ class Unit
     }
 
     /**
-     * @return string
+     * @return ?string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
-        return $this->type;
+        return $this->type ?? null;
     }
 
     /**
