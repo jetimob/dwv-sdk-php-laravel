@@ -66,6 +66,9 @@ class PropertyTest extends TestCase
                 if (!is_null($building->getIncorporation())) {
                     self::assertIsString($building->getIncorporation());
                 }
+                if (!is_null($building->getDeliveryDate())) {
+                    self::assertIsString($building->getDeliveryDate());
+                }
             }
         }
     }

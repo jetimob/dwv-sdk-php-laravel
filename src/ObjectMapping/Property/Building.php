@@ -24,6 +24,7 @@ class Building
     /** @var BuildingFeature[] $features */
     protected ?array $features;
     protected ?BuildingCover $cover;
+    protected ?string $delivery_date;
 
     protected function descriptionItemType(): string
     {
@@ -139,5 +140,10 @@ class Building
     public function getIncorporation(): ?string
     {
         return $this->incorporation ?? null;
+    }
+
+    public function getDeliveryDate(): ?string
+    {
+        return $this->delivery_date;
     }
 }
