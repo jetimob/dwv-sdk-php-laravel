@@ -8,39 +8,39 @@ class BuildingCoverSizes
 {
     use Serializable;
 
-    protected string $small;
-    protected string $medium;
-    protected string $large;
-    protected string $circle;
+    protected ?string $small;
+    protected ?string $medium;
+    protected ?string $large;
+    protected ?string $circle;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getSmall(): string
+    public function getSmall(): ?string
     {
         return $this->small;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getMedium(): string
+    public function getMedium(): ?string
     {
         return $this->medium;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLarge(): string
+    public function getLarge(): ?string
     {
         return $this->large;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCircle(): string
+    public function getCircle(): ?string
     {
         return $this->circle;
     }

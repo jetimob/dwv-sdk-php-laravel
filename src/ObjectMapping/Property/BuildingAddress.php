@@ -17,8 +17,8 @@ class BuildingAddress
     protected string $city;
     protected string $state;
     protected ?string $country;
-    protected float $latitude;
-    protected float $longitude;
+    protected ?float $latitude;
+    protected ?float $longitude;
 
     /**
      * @return string
@@ -85,17 +85,17 @@ class BuildingAddress
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getLatitude(): float
+    public function getLatitude(): ?float
     {
         return $this->latitude;
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getLongitude(): float
+    public function getLongitude(): ?float
     {
         return $this->longitude;
     }
