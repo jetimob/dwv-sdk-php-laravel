@@ -8,7 +8,7 @@ class UnitAdditionalGalleries
 {
     use Serializable;
 
-    protected string $title;
+    protected ?string $title;
     /** @var BuildingCover[] $files */
     protected array $files;
 
@@ -18,9 +18,9 @@ class UnitAdditionalGalleries
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }

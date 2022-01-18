@@ -8,14 +8,14 @@ class BuildingFeature
 {
     use Serializable;
 
-    protected string $type;
+    protected ?string $type;
     /** @var string[] $tags */
     protected array $tags;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }

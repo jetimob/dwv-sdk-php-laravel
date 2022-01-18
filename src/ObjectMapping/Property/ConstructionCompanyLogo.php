@@ -8,14 +8,14 @@ class ConstructionCompanyLogo
 {
     use Serializable;
 
-    protected string $url;
+    protected ?string $url;
 
     protected ConstructionCompanyLogoSizes $sizes;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }

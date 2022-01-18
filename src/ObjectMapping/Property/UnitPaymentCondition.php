@@ -8,14 +8,14 @@ class UnitPaymentCondition
 {
     use Serializable;
 
-    protected string $title;
+    protected ?string $title;
     protected ?UnitPaymentConditionOperator $operator;
     protected ?string $value;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }

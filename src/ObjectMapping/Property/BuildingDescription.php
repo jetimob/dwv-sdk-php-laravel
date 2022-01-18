@@ -8,7 +8,7 @@ class BuildingDescription
 {
     use Serializable;
 
-    protected string $title;
+    protected ?string $title;
 
     /** @var BuildingDescriptionItem[] $items */
     protected array $items;
@@ -19,9 +19,9 @@ class BuildingDescription
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }

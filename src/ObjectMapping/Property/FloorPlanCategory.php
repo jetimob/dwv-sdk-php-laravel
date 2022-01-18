@@ -9,23 +9,23 @@ class FloorPlanCategory
     use Serializable;
 
     // Título da categoria do tipo da unidade
-    protected string $title;
+    protected ?string $title;
 
     // Tag da categoria do tipo da unidade
-    protected string $tag;
+    protected ?string $tag;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTag(): string
+    public function getTag(): ?string
     {
         return $this->tag;
     }

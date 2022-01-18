@@ -8,12 +8,12 @@ class BuildingDescriptionItem
 {
     use Serializable;
 
-    protected string $item;
+    protected ?string $item;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getItem(): string
+    public function getItem(): ?string
     {
         return $this->item;
     }

@@ -9,37 +9,45 @@ class BuildingAddress
     use Serializable;
 
     protected int $id;
-    protected string $street_name;
-    protected string $street_number;
-    protected string $neighborhood;
+    protected ?string $street_name;
+    protected ?string $street_number;
+    protected ?string $neighborhood;
     protected ?string $complement;
-    protected string $zip_code;
-    protected string $city;
-    protected string $state;
+    protected ?string $zip_code;
+    protected ?string $city;
+    protected ?string $state;
     protected ?string $country;
     protected ?float $latitude;
     protected ?float $longitude;
 
     /**
-     * @return string
+     * @return int
      */
-    public function getStreetName(): string
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getStreetName(): ?string
     {
         return $this->street_name;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getStreetNumber(): string
+    public function getStreetNumber(): ?string
     {
         return $this->street_number;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getNeighborhood(): string
+    public function getNeighborhood(): ?string
     {
         return $this->neighborhood;
     }
@@ -53,25 +61,25 @@ class BuildingAddress
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getZipCode(): string
+    public function getZipCode(): ?string
     {
         return $this->zip_code;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getState(): string
+    public function getState(): ?string
     {
         return $this->state;
     }

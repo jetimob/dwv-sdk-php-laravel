@@ -11,13 +11,13 @@ class PropertyData
     /** @var int $id - ID de integração do imóvel */
     protected int $id;
 
-    protected string $title;
+    protected ?string $title;
 
-    /** @var string $advertisement_title - Titulo de anúncio do imóvel (depreciado) */
-    protected string $advertisement_title;
+    /** @var string|null $advertisement_title - Titulo de anúncio do imóvel (depreciado) */
+    protected ?string $advertisement_title;
 
-    /** @var string $description - Descrição do imóvel integrado */
-    protected string $description;
+    /** @var string|null $description - Descrição do imóvel integrado */
+    protected ?string $description;
 
     /** @var string $status
      * enum: "active" "inactive" "auto_inactive"
@@ -58,13 +58,13 @@ class PropertyData
      */
     public function getAdvertisementTitle(): ?string
     {
-        return $this->advertisement_title ?? null;
+        return $this->advertisement_title;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -82,7 +82,7 @@ class PropertyData
      */
     public function getAddressDisplayType(): ?string
     {
-        return $this->address_display_type ?? null;
+        return $this->address_display_type;
     }
 
     /**
@@ -90,7 +90,7 @@ class PropertyData
      */
     public function getUnit(): ?Unit
     {
-        return $this->unit ?? null;
+        return $this->unit;
     }
 
     /**

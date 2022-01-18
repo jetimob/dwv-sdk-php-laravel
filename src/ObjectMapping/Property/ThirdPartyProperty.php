@@ -9,11 +9,11 @@ class ThirdPartyProperty
     use Serializable;
 
     protected int $id;
-    protected string $title;
-    protected float $price;
-    protected string $type;
+    protected ?string $title;
+    protected ?float $price;
+    protected ?string $type;
     protected ?int $dorms;
-    protected string $text_address;
+    protected ?string $text_address;
     protected ?float $private_area;
     protected ?float $util_area;
     protected ?float $total_area;
@@ -45,25 +45,25 @@ class ThirdPartyProperty
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -77,9 +77,9 @@ class ThirdPartyProperty
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getTextAddress(): string
+    public function getTextAddress(): ?string
     {
         return $this->text_address;
     }

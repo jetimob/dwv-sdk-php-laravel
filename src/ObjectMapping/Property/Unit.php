@@ -9,13 +9,13 @@ class Unit
     use Serializable;
 
     protected int $id;
-    protected string $title;
-    protected float $price;
+    protected ?string $title;
+    protected ?float $price;
     protected FloorPlan $floor_plan;
     protected ?string $type;
-    protected int $parking_spaces;
-    protected int $dorms;
-    protected int $suites;
+    protected ?int $parking_spaces;
+    protected ?int $dorms;
+    protected ?int $suites;
     protected ?int $bathroom;
     protected ?float $util_area;
     protected ?float $private_area;
@@ -45,9 +45,9 @@ class Unit
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
@@ -61,9 +61,9 @@ class Unit
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getParkingSpaces(): int
+    public function getParkingSpaces(): ?int
     {
         return $this->parking_spaces;
     }
@@ -77,9 +77,9 @@ class Unit
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getSuites(): int
+    public function getSuites(): ?int
     {
         return $this->suites;
     }
