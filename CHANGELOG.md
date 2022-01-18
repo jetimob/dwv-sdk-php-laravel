@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.4.1...v1.4.2) (2022-01-18)
+
+
+### Bug Fixes
+
+* set fields to nullable ([6be09fb](https://github.com/jetimob/dwv-sdk-php-laravel/commit/6be09fb3334c295249b595dbc13b8819ac005911))
+
 ### [1.4.1](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.4.0...v1.4.1) (2022-01-14)
 
 
