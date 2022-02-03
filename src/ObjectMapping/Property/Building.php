@@ -8,6 +8,10 @@ class Building
 {
     use Serializable;
 
+    public const NEW = 'new';
+    public const USED = 'used';
+    public const UNDER_CONSTRUCTION = 'under construction';
+
     protected int $id;
     protected ?string $title;
     protected ?string $incorporation;
@@ -25,6 +29,10 @@ class Building
     protected ?array $features;
     protected ?BuildingCover $cover;
     protected ?string $delivery_date;
+    /**
+     * @enum used, under construction, new
+     */
+    protected ?string $construction_stage;
 
     protected function descriptionItemType(): string
     {
@@ -145,5 +153,10 @@ class Building
     public function getDeliveryDate(): ?string
     {
         return $this->delivery_date;
+    }
+
+    public function getConstructionStage(): ?string
+    {
+        return $this->construction_stage;
     }
 }
