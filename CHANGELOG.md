@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.0...v1.5.1) (2022-02-03)
+
+
+### Bug Fixes
+
+* altera a propriedade de modelo ([2c03a70](https://github.com/jetimob/dwv-sdk-php-laravel/commit/2c03a70df4311f8f6ffcf94e8df367891b80d979))
+
 ## [1.5.0](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.4.1...v1.5.0) (2022-02-03)
 
 
