@@ -8,6 +8,10 @@ class PropertyData
 {
     use Serializable;
 
+    public const NEW = 'new';
+    public const USED = 'used';
+    public const UNDER_CONSTRUCTION = 'under construction';
+
     /** @var int $id - ID de integração do imóvel */
     protected int $id;
 
@@ -44,6 +48,9 @@ class PropertyData
 
     /** @var ConstructionCompany $construction_company - Informações da construtora */
     protected ConstructionCompany $construction_company;
+
+    /** @var string|null  */
+    protected ?string $construction_stage;
 
     /**
      * @return int
@@ -133,4 +140,11 @@ class PropertyData
         return $this->title ?? null;
     }
 
+    /**
+     * @return string|null
+     */
+    public function getConstructionStage(): ?string
+    {
+        return $this->construction_stage;
+    }
 }
