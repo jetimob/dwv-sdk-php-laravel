@@ -97,7 +97,7 @@ class PropertyData
      */
     public function getUnit(): ?Unit
     {
-        return $this->unit;
+        return $this->unit ?? null;
     }
 
     /**
