@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.1...v1.5.2) (2022-02-15)
+
+
+### Bug Fixes
+
+* **JETT-1985:** corrige retorno do método getUnit() ([0501327](https://github.com/jetimob/dwv-sdk-php-laravel/commit/0501327091fa8349997ad43591b5e58d42c0b7c4))
+
 ### [1.5.1](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.0...v1.5.1) (2022-02-03)
 
 
