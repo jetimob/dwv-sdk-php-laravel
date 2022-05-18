@@ -23,7 +23,7 @@ class Unit
     /** @var UnitPaymentCondition[] */
     protected ?array $payment_conditions;
 
-    protected function payment_conditionsItemType(): string
+    protected function paymentConditionsItemType(): string
     {
         return UnitPaymentCondition::class;
     }

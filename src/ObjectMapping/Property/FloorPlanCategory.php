@@ -19,7 +19,7 @@ class FloorPlanCategory
      */
     public function getTitle(): ?string
     {
-        return $this->title;
+        return $this->title ?? null;
     }
 
     /**
@@ -27,6 +27,6 @@ class FloorPlanCategory
      */
     public function getTag(): ?string
     {
-        return $this->tag;
+        return $this->tag ?? null;
     }
 }

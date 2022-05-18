@@ -18,12 +18,12 @@ class ConstructionCompany
     protected ?array $additionals_contacts;
     protected ConstructionCompanyLogo $logo;
 
-    protected function business_contactsItemType(): string
+    protected function businessContactsItemType(): string
     {
         return ConstructionCompanyBusinessContact::class;
     }
 
-    protected function additionals_contactsItemType(): string
+    protected function additionalsContactsItemType(): string
     {
         return ConstructionCompanyAdditionalContact::class;
     }

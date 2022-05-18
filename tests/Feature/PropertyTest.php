@@ -36,12 +36,17 @@ class PropertyTest extends TestCase
 
         foreach ($response->getData() as $propertyData) {
             self::assertInstanceOf(PropertyData::class, $propertyData);
+
             if ($unit = $propertyData->getUnit()) {
                 self::assertIsInt($unit->getDorms());
                 self::assertIsInt($unit->getId());
-                self::assertIsString($unit->getType());
                 self::assertIsString($unit->getTitle());
                 self::assertIsArray($unit->getPaymentConditions());
+
+                if (!is_null($unit->getType())) {
+                    self::assertIsString($unit->getType());
+                }
+
                 foreach ($unit->getPaymentConditions() as $paymentCondition) {
                     if (!is_null($operator = $paymentCondition->getOperator())) {
                         self::assertInstanceOf(UnitPaymentConditionOperator::class, $operator);
@@ -50,25 +55,33 @@ class PropertyTest extends TestCase
                     self::assertIsString($paymentCondition->getTitle());
                     self::assertIsString($paymentCondition->getValue());
                 }
+
                 if (!is_null($unit->getPrivateArea())) {
                     self::assertIsFloat($unit->getPrivateArea());
                 }
+
                 if (!is_null($unit->getTotalArea())) {
                     self::assertIsFloat($unit->getTotalArea());
                 }
-                $floorPlan = $unit->getFloorPlan();
-                self::assertIsString($floorPlan->getCategory()->getTag());
-                self::assertIsString($floorPlan->getCategory()->getTitle());
             }
+
             if ($building = $propertyData->getBuilding()) {
                 self::assertIsFloat($building->getAddress()->getLatitude());
                 self::assertIsFloat($building->getAddress()->getLongitude());
+                self::assertIsArray($building->getArchitecturalPlans());
+
                 if (!is_null($building->getIncorporation())) {
                     self::assertIsString($building->getIncorporation());
                 }
+
                 if (!is_null($building->getDeliveryDate())) {
                     self::assertIsString($building->getDeliveryDate());
                 }
+            }
+
+            if ($constructionCompany = $propertyData->getConstructionCompany()) {
+                self::assertIsArray($constructionCompany->getBusinessContacts());
+                self::assertIsArray($constructionCompany->getAdditionalsContacts());
             }
         }
     }

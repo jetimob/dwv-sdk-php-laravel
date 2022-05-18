@@ -36,7 +36,7 @@ class Building
         return BuildingFeature::class;
     }
 
-    protected function architectural_plansItemType(): string
+    protected function architecturalPlansItemType(): string
     {
         return BuildingCover::class;
     }
