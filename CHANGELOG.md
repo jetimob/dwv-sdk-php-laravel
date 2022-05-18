@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.4](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.3...v1.5.4) (2022-05-18)
+
+
+### Bug Fixes
+
+* converte para camelCase o nome das funções ([03c629f](https://github.com/jetimob/dwv-sdk-php-laravel/commit/03c629fcb99e7d32a2dc8337518503bd34dfe846))
+
 ### [1.5.3](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.2...v1.5.3) (2022-04-14)
 
 ### [1.5.2](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.1...v1.5.2) (2022-02-15)
