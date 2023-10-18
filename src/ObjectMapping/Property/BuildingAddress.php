@@ -8,7 +8,7 @@ class BuildingAddress
 {
     use Serializable;
 
-    protected int $id;
+    protected ?int $id;
     protected ?string $street_name;
     protected ?string $street_number;
     protected ?string $neighborhood;
@@ -23,7 +23,7 @@ class BuildingAddress
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
