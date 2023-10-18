@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.6](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.5...v1.5.6) (2023-10-18)
+
+
+### Bug Fixes
+
+* Adiciona nullable ao id do endereço enviado pela DWV ([e5dab0c](https://github.com/jetimob/dwv-sdk-php-laravel/commit/e5dab0ca936e857be907151be559757184af276d))
+
 ### [1.5.5](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.4...v1.5.5) (2022-08-23)
 
 
