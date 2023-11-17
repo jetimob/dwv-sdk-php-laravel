@@ -22,10 +22,17 @@ class Unit
     protected ?float $total_area;
     /** @var UnitPaymentCondition[] */
     protected ?array $payment_conditions;
+    /** @var BuildingCover[] $additional_galleries */
+    protected ?array $additional_galleries;
 
     protected function paymentConditionsItemType(): string
     {
         return UnitPaymentCondition::class;
+    }
+
+    protected function additionalGalleriesItemType(): string
+    {
+        return BuildingCover::class;
     }
 
     /**
@@ -132,4 +139,8 @@ class Unit
         return $this->floor_plan;
     }
 
+    public function getAdditionalGalleries(): ?array
+    {
+        return $this->additional_galleries;
+    }
 }
