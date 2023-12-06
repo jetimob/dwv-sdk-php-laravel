@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.6.0...v1.6.1) (2023-12-06)
+
+
+### Bug Fixes
+
+* corrige tipo do campo additional_galleries ([ba3b789](https://github.com/jetimob/dwv-sdk-php-laravel/commit/ba3b78927410bf3ab2111eaaaaec41ab591223d6))
+
 ## [1.6.0](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.5.6...v1.6.0) (2023-11-17)
 
 
