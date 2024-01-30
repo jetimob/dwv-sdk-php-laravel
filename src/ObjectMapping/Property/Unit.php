@@ -24,6 +24,7 @@ class Unit
     protected ?array $payment_conditions;
     /** @var UnitAdditionalGalleries[] $additional_galleries */
     protected ?array $additional_galleries;
+    protected ?BuildingCover $cover = null;
 
     protected function paymentConditionsItemType(): string
     {
@@ -142,5 +143,10 @@ class Unit
     public function getAdditionalGalleries(): ?array
     {
         return $this->additional_galleries;
+    }
+
+    public function getCover(): ?BuildingCover
+    {
+        return $this->cover;
     }
 }
