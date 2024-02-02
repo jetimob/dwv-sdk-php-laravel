@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.6.1...v1.7.0) (2024-02-02)
+
+
+### Features
+
+* adiciona campo da imagem de capa da unidade ([c0c5a64](https://github.com/jetimob/dwv-sdk-php-laravel/commit/c0c5a640d40e37c500170b9c15d77f004b5c6e4c))
+
 ### [1.6.1](https://github.com/jetimob/dwv-sdk-php-laravel/compare/v1.6.0...v1.6.1) (2023-12-06)
 
 
